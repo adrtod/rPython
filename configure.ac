@@ -46,6 +46,7 @@ fi
 PKG_LIBS=`$PYTHONCONFIG --ldflags`			# valor modificado	
 PKG_CFLAGS=`$PYTHONCONFIG --includes`
 
+
 # Find the .so library for python
 : ${PYTHON=`which ${MYPYTHON}`}
 if test -z "${PYTHON}"; then
@@ -55,6 +56,10 @@ fi
 
 PYTHONLIBFILE=libpython`$PYTHON -c "import sys; print(sys.version[[:3]])"`.so
 
+MYPYHTON_PREFIX=`$PYTHONCONFIG --prefix`
+PYTHONLIBFILE=${MYPYHTON_PREFIX}/lib/${PYTHONLIBFILE} # modif A. Todeschini 2017-10-12
+
+PKG_LIBS="$PKG_LIBS -L${MYPYHTON_PREFIX}/lib"
 PKG_CFLAGS="$PKG_CFLAGS -D PYTHONLIBFILE=$PYTHONLIBFILE"
 
 

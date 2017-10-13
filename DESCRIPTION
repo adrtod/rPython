@@ -1,5 +1,5 @@
 Package: rPython
-Version: 0.0-6
+Version: 0.0-7.9000
 Date: 2015-11-15
 Title: Package Allowing R to Call Python
 Author: Carlos J. Gil Bellosta
@@ -12,6 +12,3 @@ SystemRequirements: Python (>= 2.7) and Python headers and libraries
 OS_type: unix
 URL: http://rpython.r-forge.r-project.org/
 NeedsCompilation: yes
-Packaged: 2015-11-15 20:42:54 UTC; carlos
-Repository: CRAN
-Date/Publication: 2015-11-15 22:27:07
